@@ -1,0 +1,13 @@
+.ulGallery {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color :white;
+
+    }
+
+    
+.ulGallery li{
+list-style: none;
+
+    }
