@@ -1,0 +1,16 @@
+.navbarCtn{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+}
+
+.link{
+    color:aliceblue;
+}
+

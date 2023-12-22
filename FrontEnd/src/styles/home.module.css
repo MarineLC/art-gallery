@@ -1,19 +1,90 @@
 .mainText {
-color: white;
+   color: white;
+   margin-bottom: 0;
 
-  }
-  
-  .link {
-    color: aqua;
-    text-decoration: underline;
-  }
-
- .page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    height: 100vh; 
  }
-
+ 
+ 
+ .link {
+   color: aqua;
+   cursor: pointer;
+   transition: color 0.5s ease;
+ }
+ 
+ .link:hover {
+   color: purple;
+ }
+ 
+ .page {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+   max-width: 80%;
+   margin-left: 10%;
+   height: 100%;
+ }
+ 
+ .loginCtn {
+   display: flex;
+   flex-direction: row; 
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .linkLogin, .linkSignup {
+   color: aqua;
+   margin-top: 10px;
+ }
+ 
+ .linkLogin:hover, .linkSignup:hover {
+   color: purple;
+ }
+ 
+ .mainText {
+   color: white;
+   margin-bottom: 0;
+ }
+ 
+ .link {
+   color: aqua;
+   cursor: pointer;
+   transition: color 0.3s ease;
+ }
+ 
+ .link:hover {
+   color: purple;
+ }
+ 
+ .page {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+   max-width: 80%;
+   margin-left: 10%;
+   height: 100%;
+ }
+ 
+ .loginCtn {
+   display: flex;
+   flex-direction: row; 
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .linkLogin, .linkSignup {
+   color: aqua;
+   margin-top: 0px;
+ }
+ 
+ .linkLogin:hover, .linkSignup:hover {
+   color: purple;
+ }
+ 
+ .orText {
+   margin: 0 5px; 
+   color: black;
+ }
+ 
+ 
