@@ -1,0 +1,19 @@
+.mainText {
+color: white;
+
+  }
+  
+  .link {
+    color: aqua;
+    text-decoration: underline;
+  }
+
+ .page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100vh; 
+ }
+
