@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"; 
-import HomePage from "./pages/HomePage";       
-import AboutPage from "./pages/AboutPage";     
-import GalleryPage from "./pages/GalleryPage"; 
-import AddArtworkPage from "./pages/AddArtworkPage";  
-import UserProfilePage from "./pages/UserProfilePage";   
-import LogInPage from "./pages/LogInPage";   
-import ArtDetailsPage from "./pages/ArtDetailsPage";{/*MISSING ROUTE PATH TO ART DETAILS PAGE*/}
-import ErrorPage from "./pages/ErrorPage";
+     
+import HomePage from './pages/HomePage.jsx'
+import AboutPage from "./pages/AboutPage.jsx";   
+  
+import GalleryPage from "./pages/GalleryPage.jsx"; 
+import AddArtworkPage from "./pages/AddArtworkPage.jsx";  
+import UserProfilePage from "./pages/UserProfilePage.jsx";   
+import LogInPage from "./pages/LogInPage.jsx";   
+import ArtDetailsPage from "./pages/ArtDetailsPage.jsx";{/*MISSING ROUTE PATH TO ART DETAILS PAGE*/}
+import ErrorPage from "./pages/ErrorPage.jsx";
 import './App.css'
 
 
