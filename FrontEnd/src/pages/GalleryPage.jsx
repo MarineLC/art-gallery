@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react"
 import '../App.css'
 import classeGallery from '../styles/gallery.module.css'
+import Navbar from '../components/Navbar.jsx';
+
 
 import React from "react";
 import axios from "axios";
@@ -26,8 +28,10 @@ React.useEffect(() => {axios.get(`http://localhost:4000/arts`).then(response => 
 
 
 return(
+  <div>
+    <Navbar/>
     <div className={classeGallery.ulGallery}>
-
+    
     <ul>
      {arts.map(art => (
           <li key ={art.id}>
@@ -41,6 +45,7 @@ return(
     ))}
 
 </ul>
+  </div>
     </div>
 
 

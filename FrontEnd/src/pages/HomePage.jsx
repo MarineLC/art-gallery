@@ -7,33 +7,34 @@ const HomePage = () => {
   return (
     <div className={classes.page}>
      <h1 className={classes.mainText}>
-     <span>
+     <span className={classes.artHub}>ARTHUB<br/></span>{' '}
+  Digital {' '}
   <Link to="/gallery" className={classes.link}>
-    ArtHub
-  </Link>
-  </span>{' '}
-  is a digital gallery and a community for all art lovers. Every art lover is welcome to{' '}
-  <Link to="/contribute" className={classes.link}>
+  gallery 
+  </Link>{' '}
+  where every art lover is welcome to{' '}
+  <Link to="/create" className={classes.link}>
     contribute 
   </Link>{' '}
-  to the gallery and enrich our art collection. Discover the{' '}
+   and enrich our art collection. 
+   Discover the{' '}
   <Link to="/team" className={classes.link}>
     team
   </Link>{' '}
-  which stands behind this project.
-</h1>
-<div className={classes.loginCtn}>
-<Link to="/login" className={`${classes.link} ${classes.linkLogin}`}>
-<p>log in </p>
-</Link>{' '}
-<p className={classes.orText}>{' '} or {' '}</p>
-<Link to="/login" className={`${classes.link} ${classes.linkSignUp}`}>
+  behind this project.
+  </h1>
+  <div className={classes.loginCtn}>
+  <Link to="/login" className={`${classes.link} ${classes.linkLogin}`}>
+  <p>log in </p>
+  </Link>{' '}
+  <p className={classes.orText}>{' '} or {' '}</p>
+  <Link to="/login" className={`${classes.link} ${classes.linkSignUp}`}>
   <p>sign up</p>
-</Link>
-</div>
+  </Link>
+  </div>
     </div>
   );
-};
+  };
 
-export default HomePage;
+  export default HomePage;
 

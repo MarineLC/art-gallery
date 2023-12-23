@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"; 
      
 import HomePage from './pages/HomePage.jsx'
-import AboutPage from "./pages/AboutPage.jsx";   
+import TeamPage from "./pages/TeamPage.jsx";   
   
 import GalleryPage from "./pages/GalleryPage.jsx"; 
 import AddArtworkPage from "./pages/AddArtworkPage.jsx";  
@@ -20,7 +20,7 @@ function App() {
       <div className='App'>
       <Routes>
         <Route path="/" element={<HomePage />} /> 
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/create" element={<AddArtworkPage />} />
         <Route path="/profile" element={<UserProfilePage />} />

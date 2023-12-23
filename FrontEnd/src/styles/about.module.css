@@ -1,0 +1,43 @@
+.ctn{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin-left: 15%;
+    padding-top: 60px; 
+}
+
+.memberCtn{
+    text-align: left;
+    max-width: 100%;
+   
+}
+
+.name{
+margin: 10px 0 5px;
+max-width: 350px;
+color: aliceblue;
+}
+
+
+.text {
+    color: aliceblue;
+    max-width: 60%;
+}
+
+.img{
+    max-width: 350px;
+    height: auto;
+    object-fit: cover; 
+}
+
+
+/* responsivnes */
+@media (max-width: 768px) {
+    .ctn {
+      flex-direction: column; 
+      margin-left: 10%;
+    }
+  }

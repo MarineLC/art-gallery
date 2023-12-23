@@ -1,10 +1,28 @@
+.page {
+  display: flex;
+  flex-direction: column; 
+  justify-content:space-evenly;
+  align-items: center;
+
+}
+
 .mainText {
    color: white;
    margin-bottom: 0;
+   width: 70%;
 
+   
  }
  
- 
+ .artHub{
+ font-size:84px;
+ display: flex;
+ justify-content:center;
+ letter-spacing: 20px;
+ border-bottom: 2px solid white;
+ }
+
+
  .link {
    color: aqua;
    cursor: pointer;
@@ -13,16 +31,6 @@
  
  .link:hover {
    color: purple;
- }
- 
- .page {
-   display: flex;
-   flex-direction: column; 
-   justify-content: center;
-   align-items: center;
-   max-width: 80%;
-   margin-left: 10%;
-   height: 100%;
  }
  
  .loginCtn {
