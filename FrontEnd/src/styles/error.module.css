@@ -1,0 +1,34 @@
+body {
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mainCtn {
+    text-align: center;
+   
+}
+
+.h1Text {
+    font-size: 84px;
+    color: aliceblue; 
+}
+
+.text404 {
+    color: aliceblue; 
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.text{
+    color: aliceblue; 
+    text-align: center;
+}
+
+.link {
+    color: aqua;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
