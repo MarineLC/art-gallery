@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} /> 
         <Route path="/team" element={<TeamPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/GalleryPage" element={<GalleryPage />} />
         <Route path="/create" element={<AddArtworkPage />} />
         <Route path="/profile" element={<UserProfilePage />} />
         <Route path="/login" element={<LogInPage />} />

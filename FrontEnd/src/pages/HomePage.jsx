@@ -9,7 +9,7 @@ const HomePage = () => {
      <h1 className={classes.mainText}>
      <span className={classes.artHub}>ARTHUB<br/></span>{' '}
   Digital {' '}
-  <Link to="/gallery" className={classes.link}>
+  <Link to="/GalleryPage" className={classes.link}>
   gallery 
   </Link>{' '}
   where every art lover is welcome to{' '}
