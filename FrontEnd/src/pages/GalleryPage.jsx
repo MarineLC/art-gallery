@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 //import '../App.css'
 import classeGallery from '../styles/gallery.module.css'
-
+import { Link } from 'react-router-dom'
 import React from "react";
 import axios from "axios";
 
@@ -24,10 +24,11 @@ React.useEffect(() => {axios.get(`http://localhost:4000/arts`).then(response => 
 return(
     
 
-    <div className={classeGallery.wrapper}>
+    <div className={classeGallery.container}>
      {arts.map(art => (
-          <div className={classeGallery.grid} key ={art.id}>
-            {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height} />}
+          <div className={classeGallery.art} key ={art.id}>
+             <Link to={'/arts/' + art._id}></Link>
+            {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height} className={classeGallery.image1} />}
          {/* <p>Title : {art.title}</p>
           <p>Dimensions : {art.dimensions}</p>
           <p>Artist : {art.artist_display}</p>
