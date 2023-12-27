@@ -57,8 +57,9 @@ const AddArtworkPage = () => {
   return (
     <div>
      <Navbar/>
-     <div >
-      <form  onSubmit={handleSubmit} className={classes.mainCtn}>
+     <div className={classes.mainCtn}>
+      <h1>Add artwork</h1>
+      <form  onSubmit={handleSubmit} className={classes.formCtn}>
      <label>Title</label>
           <input
             type='text'
@@ -108,7 +109,7 @@ const AddArtworkPage = () => {
             onChange={handleDimensions}
           />
           <button  type='submit'>
-            Add Art
+            Add 
           </button>
         </form>
       </div>

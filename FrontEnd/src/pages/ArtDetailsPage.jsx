@@ -18,10 +18,10 @@ const ArtDetailsPage = () => {
 }, []);
 
   return (
-    <div >
+    <div  >
      <Navbar/>
      {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height}  />}
-    <div className={classesArtDetailsStyle.mainCtn}>
+    <div className={classesArtDetailsStyle.textCtn}>
           <p>Title : {art.title}</p>
           <p>Dimensions : {art.dimensions}</p>
           <p>Artist : {art.artist_display}</p>
