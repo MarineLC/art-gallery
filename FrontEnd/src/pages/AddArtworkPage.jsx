@@ -1,13 +1,13 @@
-import React from 'react';
+
 import Navbar from '../components/Navbar.jsx';
-import { useState } from 'react'
+import { useEffect, React, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import classes from '../styles/add.module.css'
 import axios from "axios";
 
 const AddArtworkPage = () => {
   const navigate = useNavigate()
-  // State variables to store the values of the form inputs. You can leave these as they are.
+ 
   const [title, setTitle] = useState('')
   const [dimensions, setDimensions] = useState('')
   const [artist, setArtist] = useState('')
@@ -21,30 +21,36 @@ const AddArtworkPage = () => {
   const handleImageUrl = e => setImageUrl(e.target.value)
   const handlePlace = e => setPlace(e.target.value)
   const handleMedium = e => setMedium(e.target.value)
-  const [arts, setArts]= useState([])
+
 
   const handleSubmit = async event => {
     event.preventDefault()
     const payload = {
       title,
       dimensions,
-      image_url: imageUrl,
+      img: imageUrl,
       artist_display: artist,
       place_of_origin: place,
       medium_display: medium,
     }
-  
-
-  React.useEffect(() => {axios.post(`http://localhost:4000/arts`).then(response => {
-    body: JSON.stringify(payload)
-    })
-    if (response.ok) {
-      const newArt =  response.json()
-      console.log(newArt)
-      navigate('/GalleryPage')
+    try {
+      const response = await fetch('http://localhost:4000/arts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      if (response.ok) {
+        const newArt =  response.json()
+        console.log(newArt)
+        navigate('/GalleryPage')
+      }
+    } catch (error) {
+      console.error(error)
     }
-  }, []);
-  
+
+
 }
 
 
@@ -52,7 +58,7 @@ const AddArtworkPage = () => {
     <div>
      <Navbar/>
      <div >
-      <form className={classes.mainCtn}>
+      <form  onSubmit={handleSubmit} className={classes.mainCtn}>
      <label>Title</label>
           <input
             type='text'
@@ -81,11 +87,11 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='place'
-            placeholder='place or origin'
+            placeholder='place of origin'
             value={place}
             onChange={handlePlace}
           />
-          <label>Medium siplay</label>
+          <label>Medium display</label>
            <input
             type='text'
             name='medium'
@@ -96,8 +102,8 @@ const AddArtworkPage = () => {
           <label>Dimension</label>
            <input
             type='text'
-            name='imageUrl'
-            placeholder='Image URL'
+            name='dimension'
+            placeholder='Dimension'
             value={dimensions}
             onChange={handleDimensions}
           />
