@@ -24,23 +24,17 @@ React.useEffect(() => {axios.get(`http://localhost:4000/arts`).then(response => 
 
 return(
   <div>
-  <Navbar/>
-  <Link to="/" className={classeGallery.link}>
-  Home 
-  </Link>{' '}
-  
+  <Navbar/>  
     <div className={classeGallery.container}>
       
      {arts.map(art => (
-          <div className={classeGallery.art} key ={art.id}>
+          <div className={classeGallery.art} key={art.id}>
+            <div className={classeGallery.item} >
              <Link to={'/ArtDetailsPage/' + art.id}>
-            {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height} className={classeGallery.image1} />}
+            {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height}/>}
+            <p className={classeGallery.text}>{art.title}</p>
             </Link>
-         {/* <p>Title : {art.title}</p>
-          <p>Dimensions : {art.dimensions}</p>
-          <p>Artist : {art.artist_display}</p>
-          <p>Origin : {art.place_of_origin}</p>
-     <p>Medium : {art.medium_display}</p>*/}
+            </div>
         </div>
     ))}
 
