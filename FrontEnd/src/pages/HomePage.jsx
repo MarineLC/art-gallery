@@ -13,7 +13,7 @@ const HomePage = () => {
   gallery 
   </Link>{' '}
   where every art lover is welcome to{' '}
-  <Link to="/create" className={classes.link}>
+  <Link to="/AddArtworkPage" className={classes.link}>
     contribute 
   </Link>{' '}
    and enrich our art collection. 

@@ -23,7 +23,7 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/GalleryPage" element={<GalleryPage />} />
         <Route path="/ArtDetailsPage/:artId" element={<ArtDetailsPage />} />
-        <Route path="/create" element={<AddArtworkPage />} />
+        <Route path="/AddArtworkPage" element={<AddArtworkPage />} />
         <Route path="/profile" element={<UserProfilePage />} />
         <Route path="/login" element={<LogInPage />} />
         {/*MISSING ROUTE PATH TO ART DETAILS PAGE*/}
