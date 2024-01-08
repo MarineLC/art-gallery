@@ -58,13 +58,13 @@ const AddArtworkPage = () => {
     <div>
      <Navbar/>
      <div className={classes.mainCtn}>
-      <h1>Add artwork</h1>
+      <h1>Add Artwork</h1>
       <form  onSubmit={handleSubmit} className={classes.formCtn}>
      <label>Title</label>
           <input
             type='text'
             name='title'
-            placeholder='Title'
+            placeholder='  Title'
             value={title}
             onChange={handleTitle}
           />
@@ -72,7 +72,7 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='imageUrl'
-            placeholder='Image URL'
+            placeholder='  Image URL'
             value={imageUrl}
             onChange={handleImageUrl}
           />
@@ -80,7 +80,7 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='artist'
-            placeholder='name of the artist'
+            placeholder='  name of the artist'
             value={artist}
             onChange={handleArtist}
           />
@@ -88,7 +88,7 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='place'
-            placeholder='place of origin'
+            placeholder='  place of origin'
             value={place}
             onChange={handlePlace}
           />
@@ -96,15 +96,15 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='medium'
-            placeholder='Meidum display'
+            placeholder='  Medium display'
             value={medium}
             onChange={handleMedium}
           />
-          <label>Dimension</label>
+          <label>Dimension : width x height</label>
            <input
             type='text'
             name='dimension'
-            placeholder='Dimension'
+            placeholder='  Dimension'
             value={dimensions}
             onChange={handleDimensions}
           />
