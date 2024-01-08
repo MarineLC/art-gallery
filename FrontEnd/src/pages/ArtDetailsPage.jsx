@@ -116,19 +116,25 @@ const ArtDetailsPage = () => {
           )}
         </p>
         <div className={classesArtDetailsStyle.buttonCtn}>
-        <button onClick={() => deleteArtwork(artId)}>
+        <button 
+        className={classesArtDetailsStyle.deleteButton}
+        onClick={() => deleteArtwork(artId)}>
           Delete
         </button>
         {isEditing ? (
-          <button onClick={updateArtwork}>Save</button>
+          <button 
+          className={classesArtDetailsStyle.saveButton}
+          onClick={updateArtwork}>Save</button>
         ) : (
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button 
+          className={classesArtDetailsStyle.editButton}
+          onClick={() => setIsEditing(true)}>Edit</button>
         )}
-        <button onClick={() => navigate(-1)}>Back</button>
+        <button 
+        className={classesArtDetailsStyle.backButton}
+        onClick={() => navigate(-1)}>Back</button>
       </div>
       </div>
-     
-      
     </div>
     </div>
   );

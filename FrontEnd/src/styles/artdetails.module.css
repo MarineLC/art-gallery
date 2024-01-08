@@ -7,7 +7,7 @@
 
 .textCtn {
     color: aqua;
-    width: 500px;
+    width: 700px;
   }
 
   .textCtn > p {
@@ -17,12 +17,8 @@
     align-items: center;
     flex-wrap: nowrap;
     gap: 10px;
-
   }
 
-  
-
-  
   .editInput {
     display: flex;
     align-items: flex-start;
@@ -46,11 +42,33 @@
 .buttonCtn button {
     margin: 0 5px;
     padding: 6px 8px;
-    border: 1px solid #ccc;
     border-radius: 16px;
     width: 100px;
     margin-top: 50px;
     cursor: pointer;
+  }
+  .deleteButton {
+    border: 1px solid grey;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  .editButton {
+    border: 1px solid grey;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  .saveButton {
+    border: 1px solid aqua;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  .backButton {
+    border: 1px solid aqua;
+    background-color:aqua;
+ 
   }
 
   .imageContainer {
