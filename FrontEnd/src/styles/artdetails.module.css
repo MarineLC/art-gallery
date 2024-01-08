@@ -1,19 +1,40 @@
+
+.mainCtn{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .textCtn {
     color: aqua;
+    
   }
+
+  .textCtn > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  
+
   
   .editInput {
-    width: 200px; 
-    padding: 4px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+    width: 500px;
+    height: 30px;
+    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
   }
 
   .buttonCtn{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 8px;
   }
@@ -25,6 +46,8 @@
     border: 1px solid #ccc;
     border-radius: 16px;
     width: 100px;
+    margin-top: 50px;
+    cursor: pointer;
   }
 
   .imageContainer {

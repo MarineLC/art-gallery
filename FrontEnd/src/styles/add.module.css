@@ -30,7 +30,6 @@ color:aliceblue;
       margin-left: 170px;
       width: 150px;
       padding: 10px;
-      box-sizing: border-box;
       border-radius: 50px;
       cursor: pointer;
 }

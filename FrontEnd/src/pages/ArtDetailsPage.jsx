@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import {
-  Button,
-  EditableText,
-  Toaster,
-  Position,
-} from '@blueprintjs/core';
+
 import Navbar from '../components/Navbar.jsx';
 import classesArtDetailsStyle from '../styles/artdetails.module.css';
 
@@ -45,12 +40,13 @@ const ArtDetailsPage = () => {
   return (
     <div>
       <Navbar />
-      <div className={classesArtDetailsStyle.imageContainer}>
-        <img
-          src={art.img}
-          alt={art.alt_text}
-        />
-      </div>
+      <div className={classesArtDetailsStyle.mainCtn}>
+       <div className={classesArtDetailsStyle.imageContainer}>
+         <img
+           src={art.img}
+            alt={art.alt_text}
+         />
+       </div>
       <div className={classesArtDetailsStyle.textCtn}>
         <p>
           <span className={classesArtDetailsStyle.label}>Title:</span>{' '}
@@ -117,9 +113,7 @@ const ArtDetailsPage = () => {
             art.medium_display
           )}
         </p>
-      </div>
-     
-      <div className={classesArtDetailsStyle.buttonCtn}>
+        <div className={classesArtDetailsStyle.buttonCtn}>
         <button onClick={() => deleteArtwork(artId)}>
           Delete
         </button>
@@ -128,7 +122,11 @@ const ArtDetailsPage = () => {
         ) : (
           <button onClick={() => setIsEditing(true)}>Edit</button>
         )}
-      <button onClick={() => navigate(-1)}>Back</button>
+        <button onClick={() => navigate(-1)}>Back</button>
+      </div>
+      </div>
+     
+      
     </div>
     </div>
   );

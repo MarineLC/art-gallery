@@ -4,7 +4,8 @@ flex-direction: column;
 margin: auto;
 background-color: white;
 padding-bottom: 30px;
-width: 600px;
+width: 500px;
+height: 550px;
 }
 
 .header{
@@ -40,8 +41,8 @@ gap:25px;
 display: flex;
 align-items: center;
 margin: auto;
-width: 480px;
-height: 80px;
+width: 400px;
+height: 50px;
 background-color: #eaeaea;
 border-radius: 6px;
 }
@@ -49,6 +50,7 @@ border-radius: 6px;
 
 .input img{
     margin: 0px 30px;
+    height: 30px ;
 }
 
 .input input{

@@ -1,9 +1,9 @@
 
 import Navbar from '../components/Navbar.jsx';
-import { useEffect, React, useState } from 'react'
+import { React, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import classes from '../styles/add.module.css'
-import axios from "axios";
+
 
 const AddArtworkPage = () => {
   const navigate = useNavigate()
@@ -80,7 +80,7 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='artist'
-            placeholder='  name of the artist'
+            placeholder='  Name of the artist'
             value={artist}
             onChange={handleArtist}
           />
@@ -88,7 +88,7 @@ const AddArtworkPage = () => {
            <input
             type='text'
             name='place'
-            placeholder='  place of origin'
+            placeholder='  Place of origin'
             value={place}
             onChange={handlePlace}
           />
