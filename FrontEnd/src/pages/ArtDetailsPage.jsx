@@ -90,12 +90,14 @@ const ArtDetailsPage = () => {
         <p>
           <span className={classesArtDetailsStyle.label}>Origin:</span>{' '}
           {isEditing ? (
+            
             <input
               type="text"
               value={art.place_of_origin}
               onChange={(e) => onChangeHandler('place_of_origin', e.target.value)}
               className={classesArtDetailsStyle.editInput}
             />
+           
           ) : (
             art.place_of_origin
           )}
