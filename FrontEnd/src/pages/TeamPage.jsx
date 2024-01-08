@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar.jsx';
 import classes from '../styles/about.module.css';
 import imgHristina from '../teamImages/hristina.jpeg'
 import imgMarine from '../teamImages/marine.png'
+import { Link } from "react-router-dom";
+
 
 const TeamMember=({imgSrc, name, text}) => {
   return(
@@ -33,6 +35,11 @@ const TeamPage = () => {
          text='Hi, I am Marine. After a master degree in chemistry, I learned Java and I worked as a Java developper for 4 years. 
          I started the IronHack bootcamp in web development to learn new technical skills.'
         />
+      </div>
+      <div className={classes.link}>
+      <Link to="/GalleryPage" className={classes.linkButton}>
+        Go to Gallery {'->'}
+      </Link>
       </div>
     </div>
   );

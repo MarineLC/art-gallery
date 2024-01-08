@@ -33,6 +33,18 @@ color: aliceblue;
     object-fit: cover; 
 }
 
+.linkButton {
+    display: block;
+    margin-top: 10px;
+    margin-left: 55%; 
+    padding: 10px;
+    color: aqua;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
 
 /* responsivnes */
 @media (max-width: 768px) {
@@ -41,3 +53,4 @@ color: aliceblue;
       margin-left: 10%;
     }
   }
+

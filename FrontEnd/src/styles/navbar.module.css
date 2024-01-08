@@ -1,6 +1,6 @@
-.navbarCtn{
+.navbarCtn {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-between;
     align-items: center;
     top: 0;
     left: 0;
@@ -9,9 +9,21 @@
     height: 60px;
     position: fixed;
     border-bottom: 0.5px solid white;
+    padding-left: 20px;
+   
 }
 
-.link{
-    color:aliceblue;
+.linksContainer {
+    display: flex;
+    padding-right: 20px;
 }
 
+.link {
+    color: aliceblue;
+    margin-right: 20px;
+}
+
+.logo {
+    margin-right: auto;
+    color: aqua;
+}
