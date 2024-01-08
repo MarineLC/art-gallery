@@ -1,97 +1,135 @@
-import React from 'react';
-import Navbar from '../components/Navbar.jsx';
-import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import axios from "axios";
-import classesArtDetailsStyle from '../styles/artdetails.module.css'
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 import {
   Button,
   EditableText,
-  InputGroup,
   Toaster,
   Position,
-} from "@blueprintjs/core"
+} from '@blueprintjs/core';
+import Navbar from '../components/Navbar.jsx';
+import classesArtDetailsStyle from '../styles/artdetails.module.css';
 
 const ArtDetailsPage = () => {
-  const navigate = useNavigate()
-  const { artId } = useParams()
-  const [art, setArt]= useState([])
+  const navigate = useNavigate();
+  const { artId } = useParams();
+  const [art, setArt] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
 
-  React.useEffect(() => {axios.get(`http://localhost:4000/arts/${artId}`).then(response => {
-    const artData =  response.data
-    setArt(artData);
-  })
-  
-}, []);
+  useEffect(() => {
+    axios.get(`http://localhost:4000/arts/${artId}`).then((response) => {
+      const artData = response.data;
+      setArt(artData);
+    });
+  }, [artId]);
 
-const updateArtwork = artId => {
-  //const art = arts.find(art => art.id === id)
+  const updateArtwork = () => {
+    axios.put(`http://localhost:4000/arts/${artId}`, art).then(() => {
+      setIsEditing(false);
+    });
+  };
 
-  fetch(`http://localhost:4000/arts/${artId}`, {
-    method: "PUT",
-    body: JSON.stringify(art),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then(response => response.json())
-}
+  const deleteArtwork = () => {
+    axios.delete(`http://localhost:4000/arts/${artId}`).then(() => {
+      navigate(-1);
+    });
+  };
 
-const deleteArtwork = artId => {
-  fetch(`http://localhost:4000/arts/${artId}`, {
-    method: "DELETE",
-  })
-    .then(response => response.json())
-    .then(() => {
-      navigate(-1)
-    
-    })
-}
-
-const onChangeHandler = (id, key, value) => {
-  setArt(values => {
-    return values.map(item =>
-      item.id === id ? { ...item, [key]: value } : item
-    )
-  })
-}
-
+  const onChangeHandler = (key, value) => {
+    setArt((prevArt) => ({
+      ...prevArt,
+      [key]: value,
+    }));
+  };
 
   return (
-    <div  >
-     <Navbar/>
-     {<img src={art.img} alt={art.alt_text} width={art.width} height={art.height}  />}
-    <div className={classesArtDetailsStyle.textCtn}>
-          <p>Title : {art.title}</p>
-          <p>Dimensions : {art.dimensions}</p>
-          {/*<p>Artist : {art.artist_display}</p>*/}
-          <EditableText
-                  value={art.artist_display}
-                  onChange={value => onChangeHandler(art.id, "artist_display", value)}
-                />
-          <p>Origin : {art.place_of_origin}</p>
-          <p>Medium : {art.medium_display}</p>
-          
-          </div>
-          <button intent='btn btn-primary' onClick={() => deleteArtwork(artId) } >
-                  Delete
-                </button>
-          <button
-            className='btn btn-primary'
-            onClick={() => 
-              updateArtwork(artId)
-            }
-          >
-            Update
-          </button>
-     <button
-            className='btn btn-primary'
-            onClick={() => {
-              navigate(-1)
-            }}
-          >
-            Back
-          </button>
+    <div>
+      <Navbar />
+      <div className={classesArtDetailsStyle.imageContainer}>
+        <img
+          src={art.img}
+          alt={art.alt_text}
+        />
+      </div>
+      <div className={classesArtDetailsStyle.textCtn}>
+        <p>
+          <span className={classesArtDetailsStyle.label}>Title:</span>{' '}
+          {isEditing ? (
+            <input
+              type="text"
+              value={art.title}
+              onChange={(e) => onChangeHandler('title', e.target.value)}
+              className={classesArtDetailsStyle.editInput}
+            />
+          ) : (
+            art.title
+          )}
+        </p>
+        <p>
+          <span className={classesArtDetailsStyle.label}>Dimensions:</span>{' '}
+          {isEditing ? (
+            <input
+              type="text"
+              value={art.dimensions}
+              onChange={(e) => onChangeHandler('dimensions', e.target.value)}
+              className={classesArtDetailsStyle.editInput}
+            />
+          ) : (
+            art.dimensions
+          )}
+        </p>
+        <p>
+          <span className={classesArtDetailsStyle.label}>Artist:</span>{' '}
+          {isEditing ? (
+            <input
+              type="text"
+              value={art.artist_display}
+              onChange={(e) => onChangeHandler('artist_display', e.target.value)}
+              className={classesArtDetailsStyle.editInput}
+            />
+          ) : (
+            art.artist_display
+          )}
+        </p>
+        <p>
+          <span className={classesArtDetailsStyle.label}>Origin:</span>{' '}
+          {isEditing ? (
+            <input
+              type="text"
+              value={art.place_of_origin}
+              onChange={(e) => onChangeHandler('place_of_origin', e.target.value)}
+              className={classesArtDetailsStyle.editInput}
+            />
+          ) : (
+            art.place_of_origin
+          )}
+        </p>
+        <p>
+          <span className={classesArtDetailsStyle.label}>Medium:</span>{' '}
+          {isEditing ? (
+            <input
+              type="text"
+              value={art.medium_display}
+              onChange={(e) => onChangeHandler('medium_display', e.target.value)}
+              className={classesArtDetailsStyle.editInput}
+            />
+          ) : (
+            art.medium_display
+          )}
+        </p>
+      </div>
+     
+      <div className={classesArtDetailsStyle.buttonCtn}>
+        <button onClick={() => deleteArtwork(artId)}>
+          Delete
+        </button>
+        {isEditing ? (
+          <button onClick={updateArtwork}>Save</button>
+        ) : (
+          <button onClick={() => setIsEditing(true)}>Edit</button>
+        )}
+      <button onClick={() => navigate(-1)}>Back</button>
+    </div>
     </div>
   );
 };

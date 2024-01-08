@@ -1,5 +1,41 @@
-
-
-.textCtn{
+.textCtn {
     color: aqua;
-}
+  }
+  
+  .editInput {
+    width: 200px; 
+    padding: 4px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .buttonCtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+
+.buttonCtn button {
+    margin: 0 5px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 100px;
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+  }
+  
+  .imageContainer img {
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover; 
+  }
