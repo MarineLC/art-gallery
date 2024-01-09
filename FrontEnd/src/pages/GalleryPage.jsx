@@ -8,10 +8,11 @@ import HomePage from './HomePage.jsx';
 import Navbar from '../components/Navbar.jsx';
 const GalleryPage =() => {
 const [arts, setArts]= useState([])
+const VITE_API_URL = import.meta.env.VITE_API_URL;
 
 
 
-React.useEffect(() => {axios.get(`http://localhost:4000/arts`).then(response => {
+React.useEffect(() => {axios.get(`${VITE_API_URL}/arts`).then(response => {
     const artsData =  response.data
     setArts(artsData);
   })
