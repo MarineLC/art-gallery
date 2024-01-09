@@ -12,20 +12,20 @@ const ArtDetailsPage = () => {
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/arts/${artId}`).then((response) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/arts/${artId}`).then((response) => {
       const artData = response.data;
       setArt(artData);
     });
   }, [artId]);
 
   const updateArtwork = () => {
-    axios.put(`http://localhost:4000/arts/${artId}`, art).then(() => {
+    axios.put(`${import.meta.env.VITE_API_URL}/arts/${artId}`, art).then(() => {
       setIsEditing(false);
     });
   };
 
   const deleteArtwork = () => {
-    axios.delete(`http://localhost:4000/arts/${artId}`).then(() => {
+    axios.delete(`${import.meta.env.VITE_API_URL}/arts/${artId}`).then(() => {
       navigate(-1);
     });
   };

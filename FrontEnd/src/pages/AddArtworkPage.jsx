@@ -34,7 +34,7 @@ const AddArtworkPage = () => {
       medium_display: medium,
     }
     try {
-      const response = await fetch('http://localhost:4000/arts', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/arts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
