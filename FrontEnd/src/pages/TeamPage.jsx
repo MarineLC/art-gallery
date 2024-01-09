@@ -36,11 +36,6 @@ const TeamPage = () => {
          I started the IronHack bootcamp in web development to learn new technical skills.'
         />
       </div>
-      <div className={classes.link}>
-      <Link to="/GalleryPage" className={classes.linkButton}>
-        Go to Gallery {'->'}
-      </Link>
-      </div>
     </div>
   );
 };
