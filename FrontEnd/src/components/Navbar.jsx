@@ -3,7 +3,7 @@ import classes from '../styles/navbar.module.css'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    console.log('Navbar rendered')
+    
     return (  
         <div className={classes.navbarCtn}>  
             <Link to='/' className={`${classes.link} ${classes.logo}`}>ARTHUB</Link>
