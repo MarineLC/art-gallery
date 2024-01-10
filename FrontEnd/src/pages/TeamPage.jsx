@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar.jsx';
 import classes from '../styles/about.module.css';
 import imgHristina from '../teamImages/hristina.jpeg'
 import imgMarine from '../teamImages/marine.png'
-import { Link } from "react-router-dom";
 
 
 const TeamMember=({imgSrc, name, text}) => {

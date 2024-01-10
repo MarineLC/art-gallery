@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
-//import '../App.css'
 import classeGallery from '../styles/gallery.module.css'
 import { Link } from 'react-router-dom'
 import React from "react";
 import axios from "axios";
-import HomePage from './HomePage.jsx';
 import Navbar from '../components/Navbar.jsx';
 const GalleryPage =() => {
 const [arts, setArts]= useState([])

@@ -29,9 +29,6 @@
    transition: color 0.5s ease;
  }
  
- /*.link:hover {
-   color: purple;
- }*/
  
  .loginCtn {
    display: flex;
@@ -45,10 +42,6 @@
    margin-top: 10px;
  }
  
- /*.linkLogin:hover, .linkSignup:hover {
-   color: purple;
- }*/
- 
  .mainText {
    color: white;
    margin-bottom: 0;
@@ -60,9 +53,6 @@
    transition: color 0.3s ease;
  }
  
- /*.link:hover {
-   color: purple;
- }*/
  
  .page {
    display: flex;
@@ -85,10 +75,7 @@
    color: aqua;
    margin-top: 0px;
  }
- 
- /*.linkLogin:hover, .linkSignup:hover {
-   color: purple;
- }*/
+
  
  .orText {
    margin: 0 5px; 
