@@ -113,7 +113,7 @@ localStorage.setItem("myName", formValues.username);
         
       </div>
        
-      <button className="fluid ui button blue">Connexion</button>
+      <button className="fluid ui button blue">Connection</button>
       </form>
       {action==='Sign Up'?<div></div>: <div className={classeLogin.forgotPassword}>Lost Password? <span>Click Here!</span></div>
 }
