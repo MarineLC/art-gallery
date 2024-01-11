@@ -113,10 +113,8 @@ localStorage.setItem("myName", formValues.username);
         
       </div>
        
-      <button className="fluid ui button blue">Connection</button>
+      <button className={classeLogin.connectionCtn}>Connect</button>
       </form>
-      {action==='Sign Up'?<div></div>: <div className={classeLogin.forgotPassword}>Lost Password? <span>Click Here!</span></div>
-}
         <div className={classeLogin.submitCtn}>
         <div className={action==='Login'?classeLogin.submitGray:classeLogin.submit} onClick={()=>{setAction('Sign Up')}}>
         Sign Up

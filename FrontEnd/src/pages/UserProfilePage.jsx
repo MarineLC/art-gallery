@@ -14,8 +14,7 @@ const UserProfilePage = () => {
       <Navbar/>
       <div className={classeUser.page}>
      <h1 className={classeUser.mainText}>
-     <span className={classeUser.artHub}>ARTHUB<br/></span>{' '}
-     Hello {name}, welcome to your profile, if you want to contribute to the gallery it's <Link to="/AddArtworkPage" className={classeUser.link}>
+     Hello {name}, welcome to your profile,<br /> if you want to contribute to the gallery it's <Link to="/AddArtworkPage" className={classeUser.link}>
     here 
   </Link>{' '} 
   
